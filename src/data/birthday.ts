@@ -61,37 +61,37 @@ export const birthdayData = {
     title: "Little moments I never want to forget.",
     items: [
       {
-        image: "/images/memory-01.jpg",
+        image: "/images/image1.jpg",
         chapter: "Chapter 01",
         title: "Where it all started.",
         caption: "[ADD CAPTION — e.g. The day I realized how lucky I was.]",
       },
       {
-        image: "/images/memory-02.jpg",
+        image: "/images/image2.jpg",
         chapter: "Chapter 02",
         title: "One of my favorite memories.",
         caption: "[ADD CAPTION]",
       },
       {
-        image: "/images/memory-03.jpg",
+        image: "/images/image3.jpg",
         chapter: "Chapter 03",
         title: "Another moment I'll always remember.",
         caption: "[ADD CAPTION]",
       },
       {
-        image: "/images/memory-04.jpg",
+        image: "/images/image4.jpg",
         chapter: "Chapter 04",
         title: "Us.",
         caption: "[ADD CAPTION]",
       },
       {
-        image: "/images/memory-05.jpg",
+        image: "/images/image5.jpg",
         chapter: "Chapter 05",
         title: "[YOUR TITLE]",
         caption: "[ADD CAPTION]",
       },
       {
-        image: "/images/memory-06.jpg",
+        image: "/images/image6.jpg",
         chapter: "Chapter 06",
         title: "[YOUR TITLE]",
         caption: "[ADD CAPTION]",
