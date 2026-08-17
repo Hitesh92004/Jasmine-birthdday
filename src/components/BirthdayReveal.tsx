@@ -36,12 +36,12 @@ export default function BirthdayReveal() {
           {birthdayData.reveal.line2}
         </motion.p>
 
-        <div className="w-full px-2 py-10">
+        <div className="w-full px-2 py-6 sm:py-10">
           <motion.h2
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 2.8 }}
-            className="text-5xl sm:text-7xl md:text-9xl font-serif font-bold tracking-[0.2em] md:tracking-[0.3em] text-champagne text-glow uppercase"
+            className="text-3xl xs:text-4xl sm:text-7xl md:text-9xl font-serif font-bold tracking-[0.1em] xs:tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] text-champagne text-glow uppercase"
             aria-label={birthdayData.name}
           >
             {nameLetters.map((letter, i) => (

@@ -54,7 +54,7 @@ function SpecialCard({
       className={`flex flex-col ${isEven ? "md:items-start" : "md:items-end"} items-center`}
     >
       <div
-        className={`max-w-lg w-full p-8 md:p-10 rounded-2xl
+        className={`max-w-lg w-full p-6 sm:p-8 md:p-10 rounded-2xl
           border border-champagne/8 bg-charcoal/40 backdrop-blur-sm
           relative overflow-hidden group
           hover:border-champagne/15 transition-all duration-700`}

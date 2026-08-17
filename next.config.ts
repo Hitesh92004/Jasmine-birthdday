@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   images: {
     // Allow local images from public folder (default behaviour)
     // Add remote patterns here if needed in future

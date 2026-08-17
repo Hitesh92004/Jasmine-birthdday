@@ -64,37 +64,37 @@ export const birthdayData = {
         image: "/images/image1.jpg",
         chapter: "Chapter 01",
         title: "Where it all started.",
-        caption: "[ADD CAPTION — e.g. The day I realized how lucky I was.]",
+        caption: "The day I realized how lucky I was.",
       },
       {
         image: "/images/image2.jpg",
         chapter: "Chapter 02",
         title: "One of my favorite memories.",
-        caption: "[ADD CAPTION]",
+        caption: "I just love this photo of us, you look so happy here.",
       },
       {
         image: "/images/image3.jpg",
         chapter: "Chapter 03",
         title: "Another moment I'll always remember.",
-        caption: "[ADD CAPTION]",
+        caption: "I Love You!!",
       },
       {
         image: "/images/image4.jpg",
         chapter: "Chapter 04",
         title: "Us.",
-        caption: "[ADD CAPTION]",
+        caption: "Never stops smiling",
       },
       {
         image: "/images/image5.jpg",
         chapter: "Chapter 05",
-        title: "[YOUR TITLE]",
-        caption: "[ADD CAPTION]",
+        title: "One of our best moments!!",
+        caption: "Lovie You",
       },
       {
         image: "/images/image6.jpg",
         chapter: "Chapter 06",
-        title: "[YOUR TITLE]",
-        caption: "[ADD CAPTION]",
+        title: "Happy Birthday Haggu!!",
+        caption: "I Love You!!",
       },
     ],
   },
@@ -105,12 +105,13 @@ export const birthdayData = {
     buttonText: "Open this ❤️",
     greeting: "Jasmine,",
     paragraphs: [
-      "[WRITE YOUR PERSONAL LETTER HERE — Tell her what she means to you.]",
-      "[ADD MORE PERSONAL MEMORIES HERE — Share a favorite moment together.]",
-      "[ADD WHAT SHE MEANS TO YOU HERE — Why is she special to you?]",
+      "I may not always say it, but you mean more to me than you know.",
+      "You make my ordinary days brighter just by being in them, and I'm genuinely grateful to have you in my life.",
+      "On your birthday, I just want you to know how special you are to me. I hope this year brings you everything you deserve and so many reasons to smile.",
+      "Happy Birthday, my Jasmine. ❤️ I love you."
     ],
     closing: "With all my love,",
-    signature: "[YOUR NAME]",
+    signature: "Hitesh ❤️"
   },
 
   // ── Emotional Cinematic Section ───────────────────────────
@@ -126,17 +127,17 @@ export const birthdayData = {
     messages: [
       "You are more loved than you realize.",
       "Your smile is one of my favorite things.",
-      "You make ordinary days feel special.",
-      "[YOUR PERSONAL MESSAGE]",
+      "You make even ordinary days feel special.",
+      "No matter what happens, I'll always be rooting for you. ❤️"
     ],
   },
 
   // ── Final Birthday Section ────────────────────────────────
   finale: {
-    subtitle: "Here's to another year of you being you.",
+    subtitle: "Here's to all the beautiful moments still waiting for us.",
     buttonText: "One last thing...",
-    finalMessage: "[YOUR FINAL MESSAGE TO JASMINE]",
-    closing: "I love you. ❤️",
+    finalMessage: "No matter where life takes us, I hope I get to keep making memories with you. ❤️",
+    closing: "Happy Birthday, Jasmine. I love you. ❤️",
   },
 
   // ── Easter Eggs ───────────────────────────────────────────

@@ -77,19 +77,27 @@ function SearchEasterEgg() {
   const [open, setOpen] = useState(false);
   const [phase, setPhase] = useState(0);
 
+  const handleTrigger = useCallback(() => {
+    setOpen(true);
+    setPhase(0);
+  }, []);
+
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     // Ctrl/Cmd + Shift + F to trigger
     if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "F") {
       e.preventDefault();
-      setOpen(true);
-      setPhase(0);
+      handleTrigger();
     }
-  }, []);
+  }, [handleTrigger]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleKeyDown]);
+    window.addEventListener("trigger-search-egg", handleTrigger);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("trigger-search-egg", handleTrigger);
+    };
+  }, [handleKeyDown, handleTrigger]);
 
   useEffect(() => {
     if (!open) return;

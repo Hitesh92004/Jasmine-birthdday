@@ -10,10 +10,12 @@ function MemoryImage({
   src,
   alt,
   className,
+  isFirst = false,
 }: {
   src: string;
   alt: string;
   className?: string;
+  isFirst?: boolean;
 }) {
   const [error, setError] = useState(false);
 
@@ -36,7 +38,7 @@ function MemoryImage({
       sizes="(max-width: 768px) 90vw, 500px"
       className={`object-cover ${className || ""}`}
       onError={() => setError(true)}
-      loading="lazy"
+      {...(isFirst ? { priority: true, loading: "eager" as const } : { loading: "lazy" as const })}
     />
   );
 }
@@ -116,7 +118,7 @@ function TimelineItem({
         className={`w-full md:w-[45%] ${isEven ? "md:pr-12" : "md:pl-12"}`}
       >
         <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-          <MemoryImage src={memory.image} alt={memory.caption} />
+          <MemoryImage src={memory.image} alt={memory.caption} isFirst={index === 0} />
         </div>
       </div>
 

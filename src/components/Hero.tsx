@@ -11,6 +11,19 @@ export default function Hero({ onBegin }: { onBegin: () => void }) {
   // Phase 1: line2
   // Phase 2: greeting + name + button
 
+  const [tapCount, setTapCount] = useState(0);
+
+  const handleTap = () => {
+    setTapCount((prev) => {
+      const next = prev + 1;
+      if (next >= 5) {
+        window.dispatchEvent(new CustomEvent("trigger-search-egg"));
+        return 0;
+      }
+      return next;
+    });
+  };
+
   return (
     <section
       className="section-container relative overflow-hidden"
@@ -63,10 +76,12 @@ export default function Hero({ onBegin }: { onBegin: () => void }) {
                 {birthdayData.hero.greeting}
               </motion.p>
               <motion.h1
+                onClick={handleTap}
+                style={{ cursor: "pointer" }}
                 initial={{ opacity: 0, scale: 0.9, filter: "blur(8px)" }}
                 animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                 transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
-                className="text-5xl sm:text-6xl md:text-8xl font-serif font-semibold text-champagne text-glow tracking-wider"
+                className="text-3xl xs:text-5xl sm:text-6xl md:text-8xl font-serif font-semibold text-champagne text-glow tracking-wide xs:tracking-wider select-none"
               >
                 {birthdayData.name} <span className="text-rose-muted">❤️</span>
               </motion.h1>

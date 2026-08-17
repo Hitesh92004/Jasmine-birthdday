@@ -160,7 +160,7 @@ export default function FinalBirthday() {
                     : {}
                 }
                 transition={{ duration: 1.5, delay: 2 }}
-                className="text-5xl sm:text-6xl md:text-8xl font-serif font-bold text-champagne text-glow tracking-[0.12em] mb-8"
+                className="text-3xl xs:text-5xl sm:text-6xl md:text-8xl font-serif font-bold text-champagne text-glow tracking-[0.06em] xs:tracking-[0.12em] mb-8"
               >
                 {birthdayData.name.toUpperCase()}{" "}
                 <span className="text-rose-muted">❤️</span>

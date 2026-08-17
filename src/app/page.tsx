@@ -88,14 +88,43 @@ export default function Home() {
     return () => { els.forEach((el) => { if (el) observer.unobserve(el); }); };
   }, [hasBegun]);
 
-  // Lock scroll before beginning
+  // Lock scroll completely before beginning (including touch on mobile)
   useEffect(() => {
     if (!hasBegun) {
+      // Prevent all scrolling methods
+      const preventScroll = (e: Event) => { e.preventDefault(); };
+      const preventKeyScroll = (e: KeyboardEvent) => {
+        const scrollKeys = ["ArrowUp", "ArrowDown", "Space", "PageUp", "PageDown", "Home", "End"];
+        if (scrollKeys.includes(e.key)) e.preventDefault();
+      };
+
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = "0";
+      document.documentElement.style.overflow = "hidden";
+
+      document.addEventListener("touchmove", preventScroll, { passive: false });
+      document.addEventListener("wheel", preventScroll, { passive: false });
+      document.addEventListener("keydown", preventKeyScroll, { passive: false });
+
+      return () => {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        document.body.style.top = "";
+        document.documentElement.style.overflow = "";
+        document.removeEventListener("touchmove", preventScroll);
+        document.removeEventListener("wheel", preventScroll);
+        document.removeEventListener("keydown", preventKeyScroll);
+      };
     } else {
       document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      document.documentElement.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
   }, [hasBegun]);
 
   const handleBegin = () => {

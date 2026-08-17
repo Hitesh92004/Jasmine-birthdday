@@ -95,7 +95,7 @@ export default function LoveLetter() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-                className="letter-paper max-w-lg mx-auto p-8 md:p-12 text-left"
+                className="letter-paper max-w-lg mx-auto p-6 sm:p-8 md:p-12 text-left"
               >
                 <p className="text-xl md:text-2xl font-serif mb-8 text-[#2a2318]">
                   {birthdayData.loveLetter.greeting}
@@ -112,7 +112,7 @@ export default function LoveLetter() {
                         delay: 1.2 + i * 0.4,
                       }}
                       className="text-base md:text-lg leading-relaxed font-handwritten text-[#3d3225]"
-                      style={{ fontSize: "1.2rem" }}
+                      style={{ fontSize: "clamp(1.05rem, 4.5vw, 1.25rem)" }}
                     >
                       {para}
                     </motion.p>
